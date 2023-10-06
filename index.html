@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Check your personality according to your name  </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Inspiration&family=Kanit:wght@100&family=Poppins:wght@300&family=Rubik+Iso&family=Stylish&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/Mylogo.png" alt="My logo ">
+        </div>
+        
+    </div>
+    <div class="main">
+        <h1>What does your name say about your personality?</h1>
+        <div class="putName">
+            <label for="name">Enter your name:</label>    
+        </div>
+        <div class="putName2">
+            <input type="text" name="" id="name" placeholder="Enter name">
+        </div>
+        <div class="welcomeImage">
+            <img  class="imgChange"  src="images/welcomeimg.png" alt="Welcome Image">
+        </div>
+        <button>Click Me</button>
+ 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+             $('button').click(function(){
+                 const a = $('#name').val();
+                //  alert(a);
+                 $('.imgChange').attr('src' ,`https://joesch.moe/api/v1/${a}`);
+             });
+        });
+    </script>
+</body>
+</html>
